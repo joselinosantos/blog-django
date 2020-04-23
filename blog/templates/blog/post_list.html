@@ -39,67 +39,46 @@
 			<h2>Últimos posts</h2>
 
 			<div class="row">
-				<div class="column">
-					<div class="content">
-						<img src="img/news1.jpg" alt="Artigo" >
-						<h3>Loren ipsum</h3>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-						<p>Data e hora</p>
-					</div>
-				</div>
 
+				{% for post in posts %}
 				<div class="column">
 					<div class="content">
 						<img src="img/news1.jpg" alt="Artigo" >
-						<h3>Loren ipsum</h3>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-						<p>Data e hora</p>
+						<h3><a href="">{{ post.titulo }}</a></h3>
+						<p>{{ post.texto|linebreaksbr }}</p>
+						<p>Data de publição: {{ post.data_publicacao }}</p>
 					</div>
 				</div>
+				{% endfor %}
 
-				<div class="column">
-					<div class="content">
-						<img src="img/news1.jpg" alt="Artigo" >
-						<h3>Loren ipsum</h3>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-						<p>Data e hora</p>
-					</div>
-				</div>
-
-				<div class="column">
-					<div class="content">
-						<img src="img/news1.jpg" alt="Artigo" >
-						<h3>Loren ipsum</h3>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-					</div>
-				</div>
 			</div>
-		</section>
-		<div class="clear"></div>
-		<footer>
-			<div class="footer_left">
-				<div class="menu_footer">
-					<h3>Python</h3>
-					<a href="#" title="Sobre">Dicas</a>
-					<a href="#" title="Missão">OpenCV</a>
-					<a href="#" title="Missão">Raspberry Pi</a>
-					<a href="#" title="Missão">Data Science</a>
-				</div>
-				
+		</div>
+	</section>
+	<div class="clear"></div>
+	<footer>
+		<div class="footer_left">
+			<div class="menu_footer">
+				<h3>Python</h3>
+				<a href="#" title="Sobre">Dicas</a>
+				<a href="#" title="Missão">OpenCV</a>
+				<a href="#" title="Missão">Raspberry Pi</a>
+				<a href="#" title="Missão">Data Science</a>
 			</div>
-			<div class="footer_right">
-				<div class="redes_sociais">
-					<h3>Redes sociais</h3> 
-					<a href="https://pt-br.facebook.com/" title="Facebook" class="btn_geral button_azul"><i class="fa fa-fw fa-facebook"></i></a>
-					<a href="http://www.youtube.com/" title="Youtube" class="btn_geral btn_azul"><i class="fa fa-fw fa-youtube"></i></a>
-					<a href="https://twitter.com/" title="Twitter" class="btn_geral btn_azul"><i class="fa fa-fw fa-twitter"></i></a>
-					<a href="https://instagram.com" title="Instagram" class="btn_geral btn_azul"><i class="fa fa-fw fa-instagram"></i></a>
-				</div>
-				<div class="creditos">
-					<p><a href="#" title="Blog Python">By Joselino Santos</a></p>
-				</div>
-			</div>	
-		</footer>
-	</div>	
+			
+		</div>
+		<div class="footer_right">
+			<div class="redes_sociais">
+				<h3>Redes sociais</h3> 
+				<a href="https://pt-br.facebook.com/" title="Facebook" class="btn_geral button_azul"><i class="fa fa-fw fa-facebook"></i></a>
+				<a href="http://www.youtube.com/" title="Youtube" class="btn_geral btn_azul"><i class="fa fa-fw fa-youtube"></i></a>
+				<a href="https://twitter.com/" title="Twitter" class="btn_geral btn_azul"><i class="fa fa-fw fa-twitter"></i></a>
+				<a href="https://instagram.com" title="Instagram" class="btn_geral btn_azul"><i class="fa fa-fw fa-instagram"></i></a>
+			</div>
+			<div class="creditos">
+				<p><a href="#" title="Blog Python">By Joselino Santos</a></p>
+			</div>
+		</div>	
+	</footer>
+</div>	
 </body>
 </html>
