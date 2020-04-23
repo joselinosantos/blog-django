@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 19px;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+body {
+  font-family: 'Segoe UI Light', 'Lato', Arial, Helvetica, sans-serif;
+  color: #777;
+}
+
+.clear {
+  clear: both;
+}
+
+/* NAVEGAÇÃO PRINCIPAL - HORIZONTAL */
+.navbar {
+   /*background-color: #0984e3;*/
+  background-color: #00b0f0;
+  background-image: url('../img/bg1.png');
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 28px;
+  height: 65px;
+}
+
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 18px 20px;
+  padding: 8px;
+  border:none;
+  color: #fff;
+  transition-duration: 0.4s;
+}
+.navbar a:hover {
+   opacity: 0.5;
+}
+
+a.menu_right {
+  float: right;
+  margin-right: 10px;
+  border: 2px solid #fff;
+}
+
+/* BOTOES GERAL*/
+.btn_geral {
+  background-color: #fff;
+  border: 2px solid #fff;
+  padding: 13px;
+  color: #0984e3;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 50px;
+}
+
+.btn_geral:hover {
+  border: 2px solid #fff;
+  background-color: rgba(0,0,0, 0.5);
+  color: #fff;
+}
+
+.btn_azul {
+  background-color: #0984e3;
+  color: #fff;
+}
+
+.button_azul:hover  {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+
+/* CAIXA DE TEXTO GERAL*/
+.caixa_texto {
+  padding: 12px;
+  padding-left: 30px;
+  font-size: 17px;
+  border-radius: 30px;
+  background: none;
+  border: 1px solid #fff;
+  margin-left: 5px;
+}
+
+/*CAIXA DE BUSCA*/
+.search-container {
+  border: 1px solid #fff;
+  width: 25%;
+  border-radius:50px;
+  height: 50px;
+  float: left;
+  margin-left: 40px;
+  padding: 2px;
+}
+.search-container input[type=text] {
+  border: none;
+  outline: none;
+  width: 88%;
+}
+.search-container button {
+  width: 45px;
+  color: white;
+  border-radius:50px;
+  background: transparent;
+  border: 1.2px solid #fff;
+  border-left: 1.2px solid #fff;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.search-container button:hover {
+  background: #0b7dda;
+  border: 1.2px solid #fff;
+}
+.search-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+
+
+/*ARTIGOS*/
+#container {
+  width:100%;
+  background-color: #fefefe;
+  padding: 40px;
+}
+#container h1 {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+#artigos a {
+   font-size: 30px;
+   padding-bottom: 25px;
+}
+#artigos p, #artigos a {
+  text-align: justify;
+  color: #777;
+}
+
+#artigos .content {
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  display: inline-block;
+  box-sizing: none;
+  transition: 0.3s;
+  width: 33.1%;
+  height: 200px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 30px;
+  overflow: hidden;
+}
+.content:hover {
+  opacity: 0.7;
+}
+#artigos .detalhes {
+  overflow: visible;
+  height: 100%;
+  width: 90%;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin: auto;
+  line-height: 25px;
+}
+.detalhes:hover {
+  opacity: 1;
+}
+
+/*FOOTER*/
+footer {
+  width: 100%;
+  padding: 45px;
+  height: 200px;
+  color: #fff;
+  background-image: url('../img/bg1.png');
+ 
+}
+footer a {
+  color: #fff;
+}
+.footer_left {
+  width: 50%;
+  float: left;
+  line-height: 25px;
+}
+.footer_left .menu_footer {
+  width: 33%;
+  height: 200px;
+  float: left;
+}
+.footer_left .menu_footer a {
+  display: block;
+}
+.footer_left .menu_footer a:hover {
+  opacity: 0.5;
+}
+.footer_right {
+  float: right;
+}
+.footer_right .redes_sociais h3 {
+  padding-bottom: 25px;
+}
+.footer_right .creditos {
+  padding-top: 60px;
+}
+footer #menu_footer a:hover, .creditos a:hover {
+   opacity: 0.5;
+}
+.creditos {
+  width: 100%;
+  height: 50px;
+  background-color: #00b0f0;
+  padding: 10px;
+}
+.creditos a {
+  color: #fff;
+}
