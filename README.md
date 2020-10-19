@@ -1,7 +1,7 @@
 # Blog em Django
 Um blog feito com o framwork Django
 
-Requisitos
+### Requisitos
 * Python 3
 * Django
 * MySQL
