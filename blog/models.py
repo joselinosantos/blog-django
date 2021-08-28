@@ -2,10 +2,10 @@ from django.db import models
 from django.conf import settings
 from django.utils import timezone
 
-# Modelo para posts.
 class Post(models.Model):
-	autor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 	titulo = models.CharField(max_length=200)
+	autor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	imagem = models.CharField(max_length=20)
 	texto = models.TextField()
 	data_criacao = models.DateTimeField(default=timezone.now)
 	data_publicacao = models.DateTimeField(blank=True, null=True)

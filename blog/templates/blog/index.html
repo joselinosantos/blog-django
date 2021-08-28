@@ -1,0 +1,55 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+{% load static %}
+<div class="container center">
+  <header>
+    <img src="{% static 'img/logo.png' %}" width="300">
+    <h2>Blog de conteúdos Python</h2>
+  </header>
+
+  <div class="row">
+    <div class="col s12 m3">
+      <a href="/posts">
+        <div class="card-panel hoverable">
+          <i class="material-icons">code</i>
+          <h4 class="card-title">Programação</h4>
+          <div class="card-content">
+            <p>Dicas de programação, boas práticas segredos</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col s12 m3">
+      <div class="card-panel hoverable">
+        <i class="material-icons">database</i>
+        <h4 class="card-title">Banco de dados e SQL</h4>
+        <div class="card-content">
+          <p>Posts sobre SQL e bancos</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m3">
+      <div class="card-panel hoverable">
+        <i class="material-icons">raspberry</i>
+        <h4 class="card-title">Raspberry</h4>
+        <div class="card-content">
+          <p>Projetos incríveis que vão fazer você amar Python</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m3">
+      <div class="card-panel hoverable">
+        <i class="material-icons">datascience</i>
+        <h4 class="card-title">DataScience</h4>
+        <div class="card-content">
+          <p>Python para análise de dados é imbatível</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

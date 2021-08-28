@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+{% include 'blog/nav.html' %}
+
+<section class="container">
+	<h2>{{ post.titulo }}</h2>
+
+	<img src="{% static 'img/artigo.jpg' %}" alt="Imagem do post {{ post.titulo }}">
+
+	<!-- Botão editar apenas para usuarios autenticados -->
+	{% if user.is_authenticated %}
+	<a class="btn blue" href="{% url 'edit' pk=post.pk %}">Editar </a>
+	{% endif %}
+
+	{% if post.published_date %}
+	<p>Data de publição: {{ post.data_publicacao }}</p>
+	{% endif %}
+
+	<p>{{ post.texto|linebreaksbr }}</p>
+</section>
+{% endblock %}

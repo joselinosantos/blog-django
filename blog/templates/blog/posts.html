@@ -1,0 +1,41 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+{% load static %}
+{% include 'blog/nav.html' %}
+
+<section class="container">
+	<h2 class="titulo1">Últimos posts</h2>
+	<!-- Botão novo apenas para usuarios autenticados -->
+
+	{% if user.is_authenticated %}
+	<a class="btn blue" href="{% url 'novo-post' %}">Novo Post</a>
+	{% endif %}
+
+	<div class="row">
+		{% for post in posts %}
+		<div class="col s12 m3">
+			<div class="card hoverable">
+				<div class="card-image">
+					<img src="{% static 'img/' %}{{post.imagem}}" height="180" alt="Imagem do artigo {{ post.titulo }}">
+					<h1 class="card-title">{{ post.titulo }}</h1>
+				</div>
+				<div class="card-content">
+					<small>{{post.data_publicacao}}</small>
+					<p>{{ post.texto|truncatechars:100 }}</p>
+				</div>
+				<div class="card-action">
+					<a href="/post/{{post.id}}" class="blue-text">Ler mais</a>
+					
+					<!-- Botões editar e deletar apenas para usuarios autenticados -->
+					{% if user.is_authenticated %}
+					<a href="/post/{{post.id}}/edit"><i class="material-icons">edit</i></a>
+					<a href="/post/{{post.id}}/delete"><i class="material-icons red-text">delete</i></a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% load static %}
+<header>
+    <nav class="blue">
+        <div class="nav-wrapper container">
+            <a href="/" class="brand-logo"><img src="{% static 'img/logo.png' %}" width="80"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="{% url 'posts' %}">Python</a></li>
+                <li><a href="{% url 'posts' %}">Raspberry</a></li>
+                <li><a href="{% url 'posts' %}">SQL</a></li>
+                <li><a href="{% url 'posts' %}">Web</a></li>
+                <li><a href="{% url 'posts' %}">DataScience</a></li>
+
+                <li>
+                    <form id="search-form"></form>
+                    <input type="text" placeholder="Pesquisar..." name="search" id="search"
+                        value="{{ request.GET.search }}">
+                    </form>
+                </li>
+
+                <li><i class="material-icons" id="btn-search">search</i></li>
+            </ul>
+        </div>
+    </nav>
+</header>

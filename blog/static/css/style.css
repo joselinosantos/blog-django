@@ -158,6 +158,7 @@ a.menu_right {
 #artigos a {
    font-size: 30px;
    padding-bottom: 25px;
+   color: #0984e3;
 }
 #artigos p, #artigos a {
   text-align: justify;
@@ -175,6 +176,10 @@ a.menu_right {
   margin-bottom: 10px;
   padding: 30px;
   overflow: hidden;
+}
+#artigos .content img {
+  height: 50px;
+  width: 100%;
 }
 .content:hover {
   opacity: 0.7;
@@ -239,4 +244,24 @@ footer #menu_footer a:hover, .creditos a:hover {
 }
 .creditos a {
   color: #fff;
+}
+
+.content .post-form input, .content .post-form textarea {
+  margin-bottom: 10px;
+  height: 50px;
+}
+
+.card {
+  height: 440px;
+}
+
+#btn-search {
+  cursor: pointer;
+}
+.card .card-image {
+  background: black;
+
+}
+.card .card-image img {
+  opacity: 0.3;
 }
