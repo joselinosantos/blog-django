@@ -1,13 +1,18 @@
+#search-form input[type=text]:focus {
+  color: #fff;
+}
+.card-panel {
+  height: 220px;
+}
 .card {
+  font-size: 18px;
   height: 440px;
 }
-
 #btn-search {
   cursor: pointer;
 }
 .card .card-image {
   background: black;
-
 }
 .card .card-image img {
   opacity: 0.3;

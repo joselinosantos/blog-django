@@ -1,7 +1,9 @@
-{% extends 'blog/base.html' %}
+{% extends 'posts/base.html' %}
 {% block content %}
 {% load static %}
-{% include 'blog/nav.html' %}
+{% include 'posts/nav.html' %}
+
+<div class="divider"></div>
 
 <section class="container">
 	<h2>Últimos posts</h2>
@@ -28,8 +30,8 @@
 					
 					<!-- Botões editar e deletar apenas para usuarios autenticados -->
 					{% if user.is_authenticated %}
-					<a href="/post/{{post.id}}/edit"><i class="material-icons">edit</i></a>
-					<a href="/post/{{post.id}}/delete"><i class="material-icons red-text">delete</i></a>
+					<a href="/edit/{{post.id}}"><i class="material-icons">edit</i></a>
+					<a href="/delete/{{post.id}}"><i class="material-icons red-text">delete</i></a>
 					{% endif %}
 				</div>
 			</div>

@@ -11,8 +11,8 @@
                 <li><a href="{% url 'posts' %}">DataScience</a></li>
 
                 <li>
-                    <form id="search-form"></form>
-                    <input type="text" placeholder="Pesquisar..." name="search" id="search"
+                    <form id="search-form">
+                    <input class="white-text" type="text" placeholder="Pesquisar..." name="search" id="search"
                         value="{{ request.GET.search }}">
                     </form>
                 </li>
