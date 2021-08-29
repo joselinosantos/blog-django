@@ -1,13 +1,23 @@
-from django.urls import path
-from blog import views as views_blog
-from perfil import views as views_perfil
+"""meublog URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.0/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-	path('', views_blog.index, name='index'),
-	path('posts/', views_blog.posts, name='posts'),
-	path('post/<int:id>/', views_blog.post, name='post'),
-	path('post/novo/', views_blog.novo_post, name='novo-post'),
-	path('post/<int:id>/edit/', views_blog.edit_post, name='edit-post'),
-	path('post/<int:id>/delete/', views_blog.delete_post, name='delete-post'),
-	path('quem_sou', views_perfil.quem_sou, name='quem_sou'),
+    path('admin/', admin.site.urls),
+    path('', include('posts.urls')),
+    path('posts/', include('posts.urls')),
 ]

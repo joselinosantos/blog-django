@@ -52,6 +52,6 @@ def edit_post(request, id):
 
 def delete_post(request, id):
 	if request.method == "POST":
-		return 'DEletar'
+		return 'Deletar'
 	else:
 		return 'Nao deletar'
