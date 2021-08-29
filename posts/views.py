@@ -13,7 +13,7 @@ def posts(request):
 	if search:
 		posts = Post.objects.filter(titulo__icontains=search)
 	else:
-		posts = Post.objects.filter(data_publicacao__lte=timezone.now()).order_by('data_publicacao')
+		posts = Post.objects.filter(data_publicacao__lte=timezone.now()).order_by('data_publicacao').reverse()
 	return render(request, 'posts/posts.html', {'posts': posts})
 
 def post(request, id):
