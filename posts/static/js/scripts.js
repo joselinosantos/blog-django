@@ -7,4 +7,6 @@ $(document).ready(function() {
         searchForm.submit()
     })
 
+    $('select').formSelect();
+
 })

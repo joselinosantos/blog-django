@@ -22,8 +22,10 @@
 					<h1 class="card-title">{{ post.titulo }}</h1>
 				</div>
 				<div class="card-content">
+					<small>{{post.categoria}}</small>
+					<div class="divider"></div>
 					<small>{{post.data_publicacao}}</small>
-					<p>{{ post.texto|truncatechars:100 }}</p>
+					<p>{{ post.texto|truncatechars:90 }}</p>
 				</div>
 				<div class="card-action">
 					<a href="/post/{{post.id}}" class="blue-text">Ler mais</a>

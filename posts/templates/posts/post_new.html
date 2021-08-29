@@ -1,14 +1,18 @@
 {% extends 'posts/base.html' %}
 {% block content %}
 {% include 'posts/nav.html' %}
+{% load crispy_forms_tags %}
 
 <section class="container">
 	<h2>Criar novo Post</h2>
 
+	<div class="input-field">
 	<form method="POST">
 		{% csrf_token %}
-        {{ form.as_p }}
+        {{ form|crispy }}
+
 		<button type="submit" class="btn blue">Salvar</button>
 	</form>
+</div>
 </section>
 {% endblock %}
