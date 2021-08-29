@@ -12,7 +12,7 @@ class Post(models.Model):
 	)
 	titulo = models.CharField(max_length=200)
 	autor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-	imagem = models.FileField(max_length=20)
+	imagem = models.CharField(max_length=20)
 	texto = models.TextField()
 	categoria = models.CharField(max_length=12, choices=CATEGORIAS)
 	data_criacao = models.DateTimeField(default=timezone.now)
