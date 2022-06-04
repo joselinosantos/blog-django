@@ -12,7 +12,7 @@
 ## Getting start
 
 ## 1. Clone the repository
-git clone [git@github.com:joselinosantosti/mundo-ebooks.git :](https://github.com/joselinosantosti/blog-django.git)<br>
+git clone https://github.com/joselinosantosti/blog-django.git <br>
 
 ## 2. Create virtualenv
 * Install if not installed: pip install virtualenv <br>
